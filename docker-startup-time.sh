@@ -20,7 +20,7 @@ if ! docker images "$REPOSITORY_NAME" | grep -q "$TAG"; then
 fi
 
 # Run the container in the background
-docker run --rm -d --name "$CONTAINER_NAME" -p 8080:8080 "$IMAGE_NAME"
+docker run --rm -d --name "$CONTAINER_NAME" -p 8080:8080 -e JAVA_OPTS="-Xms512m -Xmx512m" "$IMAGE_NAME"
 
 # Wait for the app to be healthy
 echo "Waiting for application to become healthy..."
