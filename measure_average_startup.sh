@@ -6,7 +6,7 @@ total_time=0
 count=0
 
 # Run the script multiple times
-for _ in {1..10}; do
+for _ in {1..20}; do
     # Run the measure_startup.sh script and capture the output
     startup_time=$(./docker-startup-time.sh | grep "Application Startup Time" | awk '{print $4}')
 
