@@ -12,5 +12,6 @@ Average startup time over 20 runs. Using Docker on a Macbook Air M3 with 24gb.
 |--------------------------|----------------------------|---------------------|
 | Custom Docker (Baseline) | 830                        | 0                   |
 | Spring OCI               | 780                        | 50                  |
-| CDS                      | 510                        | 320                 |
-| GraalVM                  | 30                         | 800                 |
+| Custom Docker CDS        | 510                        | 320                 |
+| Spring OCI CDS           | 510                        | 320                 |
+| Spring OCI GraalVM       | 30                         | 800                 |
