@@ -18,7 +18,7 @@ for _ in {1..20}; do
 done
 
 # Calculate the average startup time
-average_time=$(echo "scale=2; $total_time / $count" | bc)
+average_time=$(echo "scale=2; ($total_time / $count) * 1000" | bc)
 
 # Output the average startup time
 echo "Average Startup Time: $average_time ms"
