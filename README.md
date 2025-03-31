@@ -8,8 +8,9 @@ starting times.
 
 Average startup time over 20 runs. Using Docker on a Macbook Air M3 with 24gb.
 
-| Type         | Average Startup Time in ms | Delta from Baseline |
-|--------------|----------------------------|---------------------|
-| Baseline JDK | 780                        | 0                   |
-| CDS          | 510                        | 270                 |
-| GraalVM      | 30                         | 750                 |
+| Type                     | Average Startup Time in ms | Delta from Baseline |
+|--------------------------|----------------------------|---------------------|
+| Custom Docker (Baseline) | 830                        | 0                   |
+| Spring OCI               | 780                        | 50                  |
+| CDS                      | 510                        | 320                 |
+| GraalVM                  | 30                         | 800                 |

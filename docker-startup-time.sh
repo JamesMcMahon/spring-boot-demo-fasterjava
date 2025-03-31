@@ -13,12 +13,6 @@ if [ "$(docker ps -q -f name=^/${CONTAINER_NAME}$)" ]; then
     docker stop "$CONTAINER_NAME"
 fi
 
-# Ensure the Docker image exists
-if ! docker images "$REPOSITORY_NAME" | grep -q "$TAG"; then
-    echo "Docker image $IMAGE_NAME not found. Building it..."
-    ./mvnw spring-boot:build-image -DskipTests
-fi
-
 # Run the container in the background
 docker run --rm -d --name "$CONTAINER_NAME" -p 8080:8080 -e JAVA_OPTS="-Xms512m -Xmx512m" "$IMAGE_NAME"
 
