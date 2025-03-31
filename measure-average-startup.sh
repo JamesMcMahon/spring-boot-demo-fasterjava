@@ -8,7 +8,7 @@ count=0
 # Run the script multiple times
 for _ in {1..20}; do
     # Run the measure_startup.sh script and capture the output
-    startup_time=$(./docker-startup-time.sh | grep "Application Startup Time" | awk '{print $4}')
+    startup_time=$(./measure-startup.sh | grep "Application Startup Time" | awk '{print $4}')
 
     # Add the captured startup time to the total
     total_time=$(echo "$total_time + $startup_time" | bc)
