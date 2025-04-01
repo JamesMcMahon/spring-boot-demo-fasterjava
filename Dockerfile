@@ -1,5 +1,4 @@
-# Use AdoptOpenJDK JDK 24 as the base image
-FROM openjdk:24-slim AS build
+FROM bellsoft/liberica-native-image-kit-container:jdk-23-nik-24-musl AS build
 
 # Set the working directory inside the container
 WORKDIR /app
@@ -12,19 +11,19 @@ COPY .mvn .mvn/
 COPY src src/
 
 # Build the Spring Boot application (for Maven)
-RUN ./mvnw clean package -DskipTests
+RUN ./mvnw clean -Pnative native:compile -DskipTests
 
 # Use a minimal JRE runtime image for the final container
-FROM openjdk:24-slim
+FROM alpine:3.21
 
 # Set working directory inside the container
 WORKDIR /app
 
 # Copy the built JAR from the build container
-COPY --from=build /app/target/*.jar app.jar
+COPY --from=build /app/target/fasterjavademo .
 
 # Expose the application's port (adjust if needed)
 EXPOSE 8080
 
 # Run the application
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["./fasterjavademo"]
