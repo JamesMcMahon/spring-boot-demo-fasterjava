@@ -38,3 +38,12 @@ Docker container run using
 | Spring OCI CDS           | 163                | 0.29           |
 | Custom Docker GraalVM    | 36                 | 0.03           |
 | Spring OCI GraalVM       | 44                 | 0.03           |
+
+## Repo layout
+
+The repo contains build scripts for custom Docker images and Spring OCI images and scripts to measure startup times.
+
+Branches
+
+* `cds` - Sample project with CDS patches applied
+* `graalvm` - Sample project with GraalVM patches applied
