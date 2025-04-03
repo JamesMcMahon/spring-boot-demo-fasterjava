@@ -1,9 +1,24 @@
 # Faster Java!
 
-Demo repo showing off [CDS](https://docs.spring.io/spring-framework/reference/integration/cds.html)
+Demo repo showing off [Class Data Sharing (CDS)](https://docs.spring.io/spring-framework/reference/integration/cds.html)
 and [GraalVM Native Images](https://docs.spring.io/spring-boot/reference/packaging/native-image/index.html) to show off
-improved
-performance.
+improved performance.
+
+### Class Data Sharing (CDS)
+
+Class Data Sharing (CDS) is a Java Virtual Machine (JVM) feature designed to reduce the startup time and memory
+footprint
+of Java applications. It achieves this by creating a shared archive of class metadata that can be loaded into memory at
+runtime,
+allowing multiple JVM instances to share common class data.
+
+### GraalVM Native Images
+
+GraalVM Native Images is a technology that allows Java applications to be compiled ahead-of-time into standalone,
+platform-specific executables. These native executables start faster and consume less memory compared to traditional
+Java applications running on the Java Virtual Machine (JVM).
+This makes them particularly well-suited for cloud environments and microservices architectures,
+where quick startup times and efficient resource utilization are critical.
 
 ## Startup times
 
