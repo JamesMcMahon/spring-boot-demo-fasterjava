@@ -14,7 +14,7 @@ allowing multiple JVM instances to share common class data.
 
 ### GraalVM Native Images
 
-GraalVM Native Images is a technology that allows Java applications to be compiled ahead-of-time into standalone,
+GraalVM Native Images are a technology that allows Java applications to be compiled ahead-of-time into standalone,
 platform-specific executables. These native executables start faster and consume less memory compared to traditional
 Java applications running on the Java Virtual Machine (JVM).
 This makes them particularly well-suited for cloud environments and microservices architectures,
