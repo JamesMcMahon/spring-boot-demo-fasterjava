@@ -1,8 +1,12 @@
 # Faster Java!
 
-Demo repo showing off [Class Data Sharing (CDS)](https://docs.spring.io/spring-framework/reference/integration/cds.html)
-and [GraalVM Native Images](https://docs.spring.io/spring-boot/reference/packaging/native-image/index.html) to show off
-improved performance.
+Demo repo showing off the performance gains
+from  [Class Data Sharing (CDS)](https://docs.spring.io/spring-framework/reference/integration/cds.html)
+and [GraalVM Native Images](https://docs.spring.io/spring-boot/reference/packaging/native-image/index.html).
+
+The project itself is about as simple as you can get. Single endpoint
+plus [Spring Boot Actuator](https://docs.spring.io/spring-boot/reference/actuator/index.html#actuator).
+Obviously real world projects will be substantially more complex but hopefully this is a helpful baseline for folks.
 
 ### Class Data Sharing (CDS)
 
